@@ -1,0 +1,67 @@
+<mat-card>
+  <h1>NUEVA RECETA</h1>
+  <form (submit)="onAddRecipe(recipeForm)" #recipeForm="ngForm">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        required
+        placeholder="Recipe title"
+        #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter a recipe title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Subtitle</mat-label>
+      <input
+        matInput
+        type="text"
+        name="subtitle"
+        ngModel
+        required
+        #subtitle="ngModel">
+        <mat-error *ngIf="subtitle.invalid">Please enter a recipe subtitle.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        rows="6"
+        type="text"
+        name="description"
+        ngModel
+        required
+        #description="ngModel"></textarea>
+        <mat-error *ngIf="description.invalid">Please enter a recipe description.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ingredients</mat-label>
+      <textarea
+        matInput
+        rows="6"
+        type="text"
+        name="ingredients"
+        ngModel
+        required
+        #ingredients="ngModel"></textarea>
+        <mat-error *ngIf="ingredients.invalid">Please enter a recipe ingredients.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Instructions</mat-label>
+        <textarea matInput
+        rows="6"
+        type="text"
+        name="instructions"
+        ngModel
+        required
+        #instructions="ngModel"></textarea>
+        <mat-error *ngIf="instructions.invalid">Please enter a recipe instructions.</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit">Save recipe</button>
+  </form>
+</mat-card>

@@ -1,0 +1,20 @@
+
+
+mat-grid-list {
+  width: 80%;
+  height: auto;
+}
+
+mat-card {
+  width: 80%;
+  padding: 5%;
+}
+
+
+img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 5%;
+}
